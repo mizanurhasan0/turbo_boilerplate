@@ -1,0 +1,5 @@
+- yarn add @apollo/server @nestjs/apollo @nestjs/config @nestjs/graphql @nestjs/jwt @nestjs/passport prisma @prisma/client apollo-server-express argon2 express graphql passport passport-google-oauth20 passport-jwt
+
+- npx prisma init
+- npx prisma migrate dev --name init
+- yarn db:seed (fake data uploaded)
