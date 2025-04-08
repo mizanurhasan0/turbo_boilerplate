@@ -9,15 +9,15 @@ export default function TopNav() {
         ['opacity-0', 'scale-y-0', 'skew-y-10'].forEach(cls => menuRef.current?.classList.toggle(cls))
     }
     return (
-        <div className="h-[46px]  bg-black text-sm">
-            <div className="container mx-auto flex items-center justify-between h-full">
-                <p className="">World's Fastest Online Shopping Destination</p>
+        <div className="h-[46px] bg-black text-xs md:text-sm">
+            <div className="container mx-auto flex items-center justify-between h-full px-4 md:px-0 space-x-2">
+                <p className="truncate max-w-sm">World's Fastest Online Shopping Destination</p>
                 <div className="relative h-full">
                     <div className="flex justify-center items-center h-full cursor-pointer select-none" onClick={showMenu}>
                         <p>My Account</p>
                         <ChevronDown className="w-4" />
                     </div>
-                    <div ref={menuRef} className="absolute opacity-0 scale-y-0 skew-y-10 origin-top right-0 w-max max-w-[calc(100vw-1rem)]  p-2 rounded-md bg-white text-gray-600 transition-all duration-300">
+                    <div ref={menuRef} className="absolute opacity-0 scale-y-0 skew-y-10 origin-top right-0 w-max max-w-[calc(100vw-1rem)]  p-2 rounded-md bg-white text-gray-600 transition-all duration-300 z-30 border-t-4 border-primary">
                         <div className="flex items-center space-x-2">
                             <User className="w-4" />
                             <p>Register</p>
