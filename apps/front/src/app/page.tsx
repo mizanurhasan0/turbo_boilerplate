@@ -7,9 +7,8 @@ export default function Home() {
     <div>
       <Navbar />
       {/* <Navbar /> */}
-      <div className="pt-56 h-[2000px]">
+      <div className="pt-28 md:pt-56 h-[2000px]">
         <Keen_Slider />
-        <p>this is paragraph</p>
         <TTService />
       </div>
     </div>

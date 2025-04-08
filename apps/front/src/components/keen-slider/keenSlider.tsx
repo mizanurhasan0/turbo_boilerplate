@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import "keen-slider/keen-slider.min.css"
 import { useKeenSlider } from 'keen-slider/react'
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import CarasolActions from './actions';
 
 const slides = [
     { id: 1, title: "Slide One", img: "./products/1.jpg" },
@@ -37,7 +37,7 @@ export default function Keen_Slider() {
             if (mouseOver) return
             timeout = setTimeout(() => {
                 instanceRef.current?.next()
-            }, 3500)
+            }, 9500)
         }
 
         instanceRef.current.on("created", () => {
@@ -73,31 +73,12 @@ export default function Keen_Slider() {
                     </div>
                 ))}
             </div>
-
-            {/* Arrows */}
-            <button
-                onClick={() => instanceRef.current?.prev()}
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-black p-2 rounded-full shadow hover:scale-105 transition"
-            >
-                <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-                onClick={() => instanceRef.current?.next()}
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-black p-2 rounded-full shadow hover:scale-105 transition"
-            >
-                <ChevronRight className="w-5 h-5" />
-            </button>
-
-            {/* Pagination Dots */}
-            <div className="flex justify-center mt-4 space-x-2">
-                {slides.map((_, idx) => (
-                    <button
-                        key={idx}
-                        onClick={() => instanceRef.current?.moveToIdx(idx)}
-                        className={`h-2 w-2 rounded-full ${currentSlide === idx ? "bg-black" : "bg-gray-400"} transition-all duration-300`}
-                    />
-                ))}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-10 text-center">
+                <h1 className="text-2xl md:text-7xl font-bold text-white text-center tracking-wide bg-gray-500/50 shadow-2xl shadow-yellow-100 max-w-2xl capitalize py-4 rounded-xl">Art is the highest form of hope </h1>
+                <p className="text-xs md:text-base bg-primary p-2 inline rounded-sm px-4">Trused online platform all over the world!</p>
+                <button type="button" className="block text-xs md:text-base bg-black text-white py-2 px-4 mx-auto my-5 rounded-md shadow-xl hover:shadow-yellow-200 transition-all duration-300 cursor-pointer">Shop now</button>
             </div>
+            <CarasolActions onNext={() => instanceRef.current?.next()} onPrev={() => instanceRef.current?.prev()} onMoveIdx={(idx: number) => instanceRef.current?.moveToIdx(idx)} slides={slides} currentSlide={currentSlide} />
         </div>
     )
 }

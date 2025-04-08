@@ -9,7 +9,7 @@ const options = [
 ]
 export default function TTService() {
     return (
-        <div className="flex w-full justify-between px-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center w-full px-24">
             {options.map((d, i) => (
                 <div key={i} className="flex space-x-4 items-center">
                     <div className="w-[3.875rem] text-[#666666] overflow-hidden">
