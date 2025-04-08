@@ -9,7 +9,7 @@ export default function TopNav() {
         ['opacity-0', 'scale-y-0', 'skew-y-10'].forEach(cls => menuRef.current?.classList.toggle(cls))
     }
     return (
-        <div className="h-[46px] bg-black text-xs md:text-sm">
+        <div className="h-[46px] bg-white text-xs md:text-sm">
             <div className="container mx-auto flex items-center justify-between h-full px-4 md:px-0 space-x-2">
                 <p className="truncate max-w-sm">World's Fastest Online Shopping Destination</p>
                 <div className="relative h-full">
