@@ -26,3 +26,13 @@
 .border-primary {
   border-color: #fbc91d;
 }
+
+.text-primary {
+  color: #fbc91d;
+}
+
+.border-shadow {
+  -webkit-box-shadow: -1px -1px 20px -8px rgba(251, 201, 29, 1);
+  -moz-box-shadow: -1px -1px 20px -8px rgba(251, 201, 29, 1);
+  box-shadow: -1px -1px 20px -8px rgba(251, 201, 29, 1);
+}
