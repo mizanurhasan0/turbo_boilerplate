@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Philosopher } from "next/font/google";
 import "./globals.css";
+import "keen-slider/keen-slider.min.css"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,6 +15,7 @@ const geistMono = Geist_Mono({
 
 const philosopher = Philosopher(
   {
+    variable: '--font-philosopher',
     subsets: ["latin"],
     weight: ['400', '700']
   }
@@ -33,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${philosopher.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${philosopher.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
