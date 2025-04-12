@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Philosopher } from "next/font/google";
 import "./globals.css";
 import "keen-slider/keen-slider.min.css"
+import Navbar from "@/components/nav/navbar";
+import Footer from "@/components/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +39,11 @@ export default function RootLayout({
       <body
         className={`${philosopher.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Navbar />
+        <div className="pt-28 md:pt-56">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );

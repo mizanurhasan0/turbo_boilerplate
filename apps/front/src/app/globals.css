@@ -47,3 +47,12 @@ body {
   -moz-box-shadow: -1px -1px 20px -8px rgba(251, 201, 29, 1);
   box-shadow: -1px -1px 20px -8px rgba(251, 201, 29, 1);
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
