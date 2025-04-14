@@ -4,11 +4,12 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import { useKeenSlider } from 'keen-slider/react'
 import CarasolActions from './actions';
+import Img from '../Image/Img';
 
 const slides = [
-    { id: 1, title: "Slide One", img: "./products/1.jpg" },
-    { id: 2, title: "Slide Two", img: "./products/2.jpg" },
-    { id: 3, title: "Slide Three", img: "./products/3.jpg" },
+    { id: 1, title: "Slide One", img: "/images/art2.webp" },
+    { id: 2, title: "Slide Two", img: "/images/art8.webp" },
+    { id: 3, title: "Slide Three", img: "/images/art12.webp" },
 ]
 
 export default function Keen_Slider() {
@@ -69,7 +70,7 @@ export default function Keen_Slider() {
             <div ref={sliderRef} className="keen-slider rounded-xl overflow-hidden">
                 {slides.map((slide) => (
                     <div key={slide.id} className={`keen-slider__slide  w-screen h-[70vh]`}>
-                        <img src={slide.img} alt="img" className="w-full h-full object-cover" />
+                        <Img src={slide.img} alt={slide.title} className="w-full h-full" />
                     </div>
                 ))}
             </div>

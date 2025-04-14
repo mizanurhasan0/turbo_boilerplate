@@ -5,6 +5,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --secondary: #13a1ed;
+  --third: #242424;
+  --primary: "#fbc91d";
+  --fourth: #cc4e2b;
+  --fifth: #33802a;
 }
 
 @theme inline {
@@ -12,7 +17,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-philo: var(--font-philosopher)
+  --font-philo: var(--font-philosopher);
+  --color-secondary: var(--secondary);
+  --color-primary: var(--primary);
+  --color-third: var(--third);
+  --color-fourth: var(--fourth);
+  --color-fifth: var(--fifth);
 }
 
 @media (prefers-color-scheme: dark) {

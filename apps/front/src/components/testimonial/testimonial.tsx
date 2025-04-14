@@ -1,10 +1,11 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
+import Img from '../Image/Img';
 
 const slides = [
-    { id: 1, name: "Slide One", position: 'Co-Founder', info: 'Duis faucibus enim vitae nunc molestie, nec nec arcu facilisis arcu Nullam mattis bibendum aac, dui accres.. vitae nunc molestie, nec nec arcu facilisis arcu Nullam mattis bibendum aac,..', img: "./products/1.jpg" },
-    { id: 2, name: "Slide Two", position: 'Co-Founder', info: 'Duis faucibus enim vitae nunc molestie, nec nec arcu facilisis arcu Nullam mattis bibendum aac, dui accres.. vitae nunc molestie, nec nec arcu facilisis arcu Nullam mattis bibendum aac,..', img: "./products/2.jpg" },
-    { id: 3, name: "Slide Three", position: 'Co-Founder', info: 'Duis faucibus enim vitae nunc molestie, nec nec arcu facilisis arcu Nullam mattis bibendum aac, dui accres.. vitae nunc molestie, nec nec arcu facilisis arcu Nullam mattis bibendum aac,..', img: "./products/3.jpg" },
+    { id: 1, name: "Eng. Mizanur Hasan", position: 'Software Engineer', info: 'Duis faucibus enim vitae nunc molestie, nec nec arcu facilisis arcu Nullam mattis bibendum aac, dui accres.. vitae nunc molestie, nec nec arcu facilisis arcu Nullam mattis bibendum aac,..', img: "/person/hasan.jpg" },
+    { id: 2, name: "Ms Jasmin", position: 'Creative Artists', info: 'Duis faucibus enim vitae nunc molestie, nec nec arcu facilisis arcu Nullam mattis bibendum aac, dui accres.. vitae nunc molestie, nec nec arcu facilisis arcu Nullam mattis bibendum aac,..', img: "/person/female1.jpg" },
+    { id: 3, name: "A/E Usman.", position: 'Architect Engineer', info: 'Duis faucibus enim vitae nunc molestie, nec nec arcu facilisis arcu Nullam mattis bibendum aac, dui accres.. vitae nunc molestie, nec nec arcu facilisis arcu Nullam mattis bibendum aac,..', img: "/person/male1.jpg" },
 ]
 
 export default function Testimonial() {
@@ -34,18 +35,18 @@ export default function Testimonial() {
 
     return (
 
-        <div className="relative overflow-hidden h-auto flex items-center justify-center bg-[url('/products/2.jpg')] bg-no-repeat bg-cover bg-fixed select-none">
+        <div className="relative overflow-hidden h-auto flex items-center justify-center bg-[url('/images/art13.webp')] bg-no-repeat bg-cover bg-fixed select-none">
             <div className="relative text-white w-full max-w-3xl">
                 <div className="overflow-hidden flex cursor-pointer" onMouseEnter={stopAutoSlide} onMouseLeave={startAutoSlide}>
                     {slides.map((p, idx) => (
                         <div
                             key={idx}
-                            className="min-w-full duration-300 flex flex-col items-center justify-cente space-y-3 py-16 px-4" style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                            className="min-w-full duration-300 flex flex-col items-center justify-cente space-y-2 py-16 px-4" style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                         >
-                            <img src={slides[currentSlide]?.img} alt="img" className="w-20 h-20 object-cover rounded-full" />
+                            <Img src={p.img} alt="img" className="w-20 h-20 rounded-full" />
 
-                            <h4 className="text-center font-semibold text-base">{p.name}</h4>
-                            <p className="text-center font-normal text-sm">{p.position}</p>
+                            <h4 className="text-center font-semibold text-xl">{p.name}</h4>
+                            <p className="text-center font-normal text-base bg-primary px-3 rounded-md text-gray-700">{p.position}</p>
                             <p className="text-center text-sm ">{p.info}</p>
                         </div>
                     ))}

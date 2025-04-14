@@ -35,11 +35,12 @@ const Details = ({ title, value }: { title: string, value: string }) => (
         <span className="font-semibold text-xl leading-6 tracking-widest">{value}</span>
     </div>
 )
-
+// bg-[]
 export default function MidNav() {
 
     return (
-        <div className="z-20 hidden md:block  h-[110px] bg-[#242424] text-white">
+        <div className="z-20 hidden md:block  h-[110px] bg-third
+         text-white">
             <div className="container mx-auto flex items-center justify-between h-full">
                 <div className="flex space-x-2 group">
                     <div className=" w-[3.125rem] h-[3.125rem] perspective-distant">
