@@ -29,11 +29,12 @@ export default function CarasolActions({ onPrev = () => { }, onNext = () => { },
             {/* Pagination Dots */}
             <div className="flex justify-center mt-4 space-x-2">
                 {slides.map((_, idx) => (
-                    <button
-                        key={idx}
-                        onClick={() => onMoveIdx(idx)}
-                        className={`h-2 w-2 rounded-full ${currentSlide === idx ? "bg-black" : "bg-gray-400"} transition-all duration-300`}
-                    />
+                    // <button
+                    //     key={idx}
+                    //     onClick={() => onMoveIdx(idx)}
+                    //     className={`h-2 w-2 rounded-full ${currentSlide === idx ? "bg-black" : "bg-gray-400"} transition-all duration-300`}
+                    // />
+                    <div key={idx} className={`w-4 h-4 rounded-full border-2   border-primary shadow-xl shadow-red-500 transition-all duration-300 ease-in-out  ${currentSlide === idx ? ' scale-125 ' : ''}`} />
                 ))}
             </div>
         </>

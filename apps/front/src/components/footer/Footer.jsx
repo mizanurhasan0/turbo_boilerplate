@@ -7,7 +7,7 @@ const address = [{ Icon: MapPin, info: "15/3 Road-19 , Mirpur-12,Dhaka" }, { Ico
 
 export default function Footer() {
     return (
-        <>
+        <div className="pt-10">
             <NewsSubscription />
             <div className="bg-base5 text-base1 py-8">
                 <div className="px-2 xl:px-0 container mx-auto grid  xl:grid-cols-3 gap-10">
@@ -37,6 +37,6 @@ export default function Footer() {
             <div className="bg-base2 text-base3 text-sm font-bold capitalize text-center">
                 <p>© Copyright softwareBD</p>
             </div>
-        </>
+        </div>
     )
 }

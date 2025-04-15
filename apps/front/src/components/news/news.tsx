@@ -16,7 +16,7 @@ export default function News() {
         }
     }
     return (
-        <div className="relative container mx-auto overflow-hidden ">
+        <div className="relative container mx-auto overflow-hiddens">
             <div className="flex items-center flex-col justify-center py-10">
                 <h1 className="text-4xl font-bold italic">Latest News</h1>
                 <img src="/icons/separator.png" alt="divider" />
