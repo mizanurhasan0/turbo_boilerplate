@@ -8,9 +8,9 @@ export default function Specification() {
     return (
         <div className="">
             <div className="relative flex gap-8 font-semibold text-base4 opacity-80">
-                <div className="absolute w-full bottom-0 border-b border-base4 border-opacity-20 pb-2 -z-10" />
+                <div className="absolute w-full bottom-0 border-b border-primary border-opacity-20 pb-2 -z-10" />
                 {TabMenu.map((d) => (
-                    <div key={d} className={`font-TT pb-2 text-left z-10 transition-all duration-500 cursor-pointer border-b-4 border-base3 ${selected === d ? ' text-base3 border-opacity-100 ' : 'border-opacity-0'}`} onClick={() => setSelected(d)}>
+                    <div key={d} className={`pb-2 text-left z-10 transition-all duration-500 cursor-pointer border-b-4 ${selected === d ? 'border-primary' : 'border-transparent'}`} onClick={() => setSelected(d)}>
                         {d}
                     </div>
                 ))}

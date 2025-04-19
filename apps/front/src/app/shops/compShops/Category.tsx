@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Category() {
     return (
-        <div className="border-2 border-gray-300 min-w-[10rem] ">
+        <div className="bg-[url('/images/art15.webp')]  border-2 border-gray-100  min-w-[10rem] ">
             <div className="flex items-center justify-between text-sm border-b-2 border-primary p-3 font-medium">
                 <p>Filter</p>
                 <p className="bg-base4 bg-opacity-20 rounded-lg px-3">Reset</p>
